@@ -62,9 +62,58 @@ export default Content;
 ![image](https://user-images.githubusercontent.com/59383987/175184575-b146104b-3199-4ba0-ad09-dfe0e860f8ae.png)
 
 
-## UseEffect with DOM event
+## Resize
 
 ```
+import {useState ,useEffect } from "react"
+function Content()
+{
+const [width, setWidth] = useState(window.innerWidth)
+useEffect(()=>
+{
+    const handleResize = () =>
+    {
+        setWidth(window.innerWidth)
+    }
+    window.addEventListener('resize', handleResize)
+    return () =>
+    {
+        window.removeEventListener('resize', handleResize)
+    }
+},[])
 
+    return (
+        <div>
+            <h1>{width}</h1>
+        </div>
+    )
+}
+export default Content;
+
+```
+![image](https://user-images.githubusercontent.com/59383987/175186968-90dbacfe-3b25-4970-b01c-f2638e21b7f5.png)
+
+## setInterval
+
+```
+import {useState ,useEffect } from "react"
+function Content()
+{
+    const [countdown, setCountdown] = useState(1)
+    useEffect(()=>
+    {
+        const intervalID = setInterval(()=>{
+            setCountdown(prev => prev-1)
+        },1000)
+        return ()=> {clearInterval(intervalID)}
+    },[])
+
+    return (
+        <div>
+            <h1>{countdown}</h1>
+        </div>
+    )
+}
+export default Content;
 
 ```
