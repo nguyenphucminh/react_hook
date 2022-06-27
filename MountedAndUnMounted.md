@@ -20,6 +20,7 @@ export default App;
 
 ```
 ## File Content.js
+```
 function Content()
 {
     return (
@@ -29,3 +30,5 @@ function Content()
     )
 }
 export default Content
+
+```
