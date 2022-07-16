@@ -3,7 +3,7 @@
 
 *initState truyền vào state, state truyền ngược lại cho reducer.*
 
-*dispatch là 1 function chứa 1 callback. trong callback nhận 1 param là job, chính là payload (setJob(job)) *
+*dispatch là 1 function chứa 1 callback. trong callback nhận 1 param là job, chính là payload (setJob(job))*
 
 *dispatch được xem như là setState, nên mọi thứ thay đổi đều dựa vào dispatch*
 
