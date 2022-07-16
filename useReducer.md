@@ -1,12 +1,15 @@
 ## useReducer
 *useReducer sử dụng giống useState nhưng nó đơn giản hóa cho nhiều trường hợp,nhiều cấp hoặc nhiều state hơn thay vì useState* 
+
 *initState truyền vào state, state truyền ngược lại cho reducer.*
+
 *dispatch là 1 function chứa 1 callback. trong callback nhận 1 param là job, chính là payload (setJob(job)) *
+
 *dispatch được xem như là setState, nên mọi thứ thay đổi đều dựa vào dispatch*
 
 *reducer mặc định chứa 2 tham số (state, action), trong action chứa TYPE và PAYLOAD được dispatch giải vào reducer để giải quyết
 sau khi giải quyết xong trong reducer, nó sẽ trả về cái state mới và update vào state cũ. *
-*
+
 ### Guide
 
 1. Init state
