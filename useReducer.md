@@ -8,7 +8,7 @@
 *dispatch được xem như là setState, nên mọi thứ thay đổi đều dựa vào dispatch*
 
 *reducer mặc định chứa 2 tham số (state, action), trong action chứa TYPE và PAYLOAD được dispatch giải vào reducer để giải quyết
-sau khi giải quyết xong trong reducer, nó sẽ trả về cái state mới và update vào state cũ. *
+sau khi giải quyết xong trong reducer, nó sẽ trả về cái state mới và update vào state cũ.*
 
 ### Guide
 
