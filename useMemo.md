@@ -1,4 +1,5 @@
 ## useMemo
+*useMemo sinh ra với mục địch tránh việc rerender nhiều lần ảnh hưởng đến performance*  
 ```
 import {useMemo,useRef, useState} from 'react'
 function App() {
