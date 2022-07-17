@@ -59,3 +59,14 @@ reportWebVitals();
 ## Structer
 
 ![image](https://user-images.githubusercontent.com/59383987/175840997-f2b32223-b2a3-4148-90eb-ee01f73f3a76.png)
+
+## Switch
+*Dành cho trường hợp performance, ko muốn load hết các route khác*
+```
+<Switch>
+<Route path="/" component={Home}></Route>
+<Route path="/path1" component={Path1}></Route>
+<Route path="/path2" component={Path2}></Route>
+
+<Switch>
+```
