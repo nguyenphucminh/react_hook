@@ -1,4 +1,5 @@
 ## useHistory
+```
 *historycác đối tượng thường có các thuộc tính và phương thức sau:
 length- (số) Số mục nhập trong ngăn xếp lịch sử
 action- (chuỗi) Hành động hiện tại ( PUSH, REPLACEhoặc POP)
@@ -13,6 +14,7 @@ go(n)- (chức năng) Di chuyển con trỏ trong ngăn xếp lịch sử theo n
 goBack()- (chức năng) Tương đương vớigo(-1)
 goForward()- (chức năng) Tương đương vớigo(1)
 block(prompt)- (chức năng) Ngăn điều hướng*
+```
 ```
 import { useHistory } from "react-router-dom";
 
