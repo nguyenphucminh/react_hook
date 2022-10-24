@@ -30,3 +30,7 @@ useEffect: Sẽ là lựa chọn cho giúp việc tối ưu tốc độ chạy k
 useLayoutEffect: Nhưng nếu bạn muốn xử lý đồng bộ với UI thì hãy dùng useLayoutEffect
 ```
 
+#### Usecallback
+1. Thay vì return 1 value như useMemo, useCallBack return 1 fucntion.
+ 
+2. useCallback được dùng để chống sự re-render lại khi không cần thiêt của các thành phần con khi các sự phụ phụ thuộc có liên quan thay đổi (ví dự giống như shouldComponentUpdate) ( dùng để memorize handler, trả về 1 function, thường đề truyền xuống các child component (pure) để nó không render lại khi không cần thiết )
