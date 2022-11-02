@@ -35,10 +35,10 @@ useLayoutEffect: Nhưng nếu bạn muốn xử lý đồng bộ với UI thì h
  
 2. useCallback được dùng để chống sự re-render lại khi không cần thiêt của các thành phần con khi các sự phụ phụ thuộc có liên quan thay đổi (ví dự giống như shouldComponentUpdate) ( dùng để memorize handler, trả về 1 function, thường đề truyền xuống các child component (pure) để nó không render lại khi không cần thiết )
 
-###### npm install jsonwebtoken
-balebom
+
 ###### Link to read more
 [Note React](https://viblo.asia/p/frontend-1-so-note-co-ban-ve-react-hook-GrLZDGn2Kk0)
 
 [Custom Hook](https://usehooks.com/)
 
+Change something
