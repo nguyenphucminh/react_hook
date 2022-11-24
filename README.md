@@ -36,6 +36,10 @@ useLayoutEffect: Nhưng nếu bạn muốn xử lý đồng bộ với UI thì h
 2. useCallback được dùng để chống sự re-render lại khi không cần thiêt của các thành phần con khi các sự phụ phụ thuộc có liên quan thay đổi (ví dự giống như shouldComponentUpdate) ( dùng để memorize handler, trả về 1 function, thường đề truyền xuống các child component (pure) để nó không render lại khi không cần thiết )
 
 
+useMemo giữ cho một hàm không được thực thi lại nếu nó không nhận được một tập hợp các tham số đã được sử dụng trước đó. Nó sẽ trả về kết quả của một function. Sử dụng nó khi bạn muốn ngăn một số thao tác nặng hoặc tốn kém tài nguyên được gọi trên mỗi lần render.
+
+useCallback giữ cho một hàm không được tạo lại lần nữa, dựa trên mảng các phần phụ thuộc. Nó sẽ trả về chính function đó. Sử dụng nó khi mà bạn muốn truyền fuction vào component con và chặn không cho một hàm nào đó tiêu thời gian, tài nguyên phải tạo lại.
+
 ###### Link to read more
 [Note React](https://viblo.asia/p/frontend-1-so-note-co-ban-ve-react-hook-GrLZDGn2Kk0)
 
