@@ -67,7 +67,7 @@ export {ThemeContext, ThemeProvider};
 ```
 import {useContext } from "react"
 import {ThemeContext} from './ThemeContext'
-function Content()
+const Content = () =>
 {   const context = useContext(ThemeContext)
 
     return(
