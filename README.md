@@ -31,10 +31,9 @@ useLayoutEffect: Nhưng nếu bạn muốn xử lý đồng bộ với UI thì h
 ```
 
 #### Usecallback
-1. Thay vì return 1 value như useMemo, useCallBack return 1 fucntion.
+1. Thay vì return 1 value như useMemo, useCallBack return 1 function.
  
 2. useCallback được dùng để chống sự re-render lại khi không cần thiêt của các thành phần con khi các sự phụ phụ thuộc có liên quan thay đổi (ví dự giống như shouldComponentUpdate) ( dùng để memorize handler, trả về 1 function, thường đề truyền xuống các child component (pure) để nó không render lại khi không cần thiết )
-
 
 useMemo giữ cho một hàm không được thực thi lại nếu nó không nhận được một tập hợp các tham số đã được sử dụng trước đó. Nó sẽ trả về kết quả của một function. Sử dụng nó khi bạn muốn ngăn một số thao tác nặng hoặc tốn kém tài nguyên được gọi trên mỗi lần render.
 
