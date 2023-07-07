@@ -41,6 +41,5 @@ useCallback giữ cho một hàm không được tạo lại lần nữa, dựa 
 
 ###### Link to read more
 [Note React](https://viblo.asia/p/frontend-1-so-note-co-ban-ve-react-hook-GrLZDGn2Kk0)
-
 [Custom Hook](https://usehooks.com/)
 https://react.dev/
