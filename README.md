@@ -39,6 +39,74 @@ useMemo giữ cho một hàm không được thực thi lại nếu nó không n
 
 useCallback giữ cho một hàm không được tạo lại lần nữa, dựa trên mảng các phần phụ thuộc. Nó sẽ trả về chính function đó. Sử dụng nó khi mà bạn muốn truyền fuction vào component con và chặn không cho một hàm nào đó tiêu thời gian, tài nguyên phải tạo lại.
 
+#### APP.jsx
+```
+import React, { useMemo, useState, useCallback } from 'react';
+import Child from './child'
+function App() {
+  const [count, setCount] = useState(0);
+
+  function fibonacci(n) {
+    if (n < 2) {
+      return n;
+    }
+    return fibonacci(n - 1) + fibonacci(n - 2);
+  }
+
+  console.time("fibonacci");
+  const result = fibonacci(20);
+  console.timeEnd("fibonacci");
+
+  console.time("fibonacciMemo");
+  const resultMemo = useMemo(() => {
+    console.time("fibonacciMemoCalculation");
+    const memoizedResult = fibonacci(20); 
+    console.timeEnd("fibonacciMemoCalculation");
+    return memoizedResult;
+  }, []);
+  console.timeEnd("fibonacciMemo");
+
+  const a = 30;
+  const handleClick = useCallback(() => {
+    setCount(prevCount => prevCount + 1);
+  }, [setCount]);
+
+
+
+  return (
+    <div className="App" style={{ padding: '10px 32px' }}>
+      <p>Count: {count}</p>
+      <p>Result: {result}</p>
+      <p>ResultMemo: {resultMemo}</p>
+      <button
+        onClick={handleClick}
+      >
+        increase
+      </button>
+      <Child value={a} handle={handleClick}/>
+    </div>
+  );
+}
+
+export default App;
+
+```
+#### child.tsx
+```
+import React from 'react';
+
+const Child = React.memo((props) => {
+    console.log("value", props.value);
+    return (
+        <p>{props.value}</p>
+    );
+});
+
+export default Child;
+
+```
+
+
 ###### Link to read more
 [Note React](https://viblo.asia/p/frontend-1-so-note-co-ban-ve-react-hook-GrLZDGn2Kk0)
 [Custom Hook](https://usehooks.com/)
